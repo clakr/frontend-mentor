@@ -7,12 +7,12 @@
   font-size: 15px;
   font-family: Outfit;
   color: var(--darkBlue);
+  background-color: var(--lightGray);
 }
 
 main {
   height: 100vh; /* this serves as fallback height for older browsers */
   height: 100svh;
-  background-color: var(--lightGray);
   padding: 2em;
   display: grid;
   place-items: center;
@@ -27,6 +27,7 @@ main {
   flex-direction: column;
   gap: 1.5em;
   align-items: center;
+
   box-shadow: 0 1em 3em -1em rgb(31 50 81 / 0.25); /* i just blatantly copied tailwindcss' shadow-2xl utility class, just converted from px to em */
 
   /* copied computed properties of the element from 375px viewport width and just went with it all throughout */
@@ -34,11 +35,21 @@ main {
   max-width: 21em; /* 315px */
 }
 
-.card > img {
+.card > div {
+  overflow: hidden;
   border-radius: 0.75em;
 }
 
-.card > :not(img) {
+.card > div > img {
+  transform: scale(1);
+  transition: transform 300ms;
+}
+
+.card:hover > div > img {
+  transform: scale(1.15);
+}
+
+.card > :not(:first-child) {
   padding-inline: 0.5em;
   line-height: 1.25em;
   max-width: 25ch;
