@@ -27,16 +27,18 @@ main {
   flex-direction: column;
   gap: 1.5em;
   align-items: center;
-  max-width: 21em;
-  max-height: 33em;
   box-shadow: 0 1em 3em -1em rgb(31 50 81 / 0.25); /* i just blatantly copied tailwindcss' shadow-2xl utility class, just converted from px to em */
+
+  /* copied computed properties of the element from 375px viewport width and just went with it all throughout */
+  max-height: 33em; /* 495px */
+  max-width: 21em; /* 315px */
 }
 
 .card > img {
   border-radius: 0.75em;
 }
 
-.card :not(img) {
+.card > :not(img) {
   padding-inline: 0.5em;
   line-height: 1.25em;
   max-width: 25ch;
@@ -53,4 +55,7 @@ span {
 .attribution {
   position: fixed;
   inset: auto 0 0 auto;
+  text-align: end;
+  max-width: 25ch;
+  line-height: 1.25em;
 }
