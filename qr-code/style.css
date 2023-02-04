@@ -31,7 +31,7 @@ main {
   box-shadow: 0 1em 3em -1em rgb(31 50 81 / 0.25); /* i just blatantly copied tailwindcss' shadow-2xl utility class, just converted from px to em */
 
   /* copied computed properties of the element from 375px viewport width and just went with it all throughout */
-  max-height: 33em; /* 495px */
+  max-height: 37em; /* 555px */
   max-width: 21em; /* 315px */
 }
 

@@ -27,8 +27,8 @@ This is a solution to the [QR Code challenge on Frontend Mentor](https://www.fro
 
 ### Links
 
-- Solution URL: [QR Code Solution](https://github.com/clakr/frontend-mentor/tree/main/qr-code-component-main)
-- Live Site URL: [https://clakr.github.io/frontend-mentor/qr-code-component-main/](https://clakr.github.io/frontend-mentor/qr-code-component-main/)
+- Solution URL: [QR Code Solution](https://github.com/clakr/frontend-mentor/tree/main/qr-code)
+- Live Site URL: [https://clakr.github.io/frontend-mentor/qr-code/](https://clakr.github.io/frontend-mentor/qr-code/)
 
 ## Process
 

@@ -27,8 +27,8 @@ This is a solution to the [Product Preview Card challenge on Frontend Mentor](ht
 
 ### Links
 
-- Solution URL: [Product Preview Card Solution](https://github.com/clakr/frontend-mentor/tree/main/product-preview-card-component-main)
-- Live Site URL: [https://clakr.github.io/frontend-mentor/product-preview-card-component/](https://clakr.github.io/frontend-mentor/product-preview-card-component/)
+- Solution URL: [Product Preview Card Solution](https://github.com/clakr/frontend-mentor/tree/main/product-preview-card)
+- Live Site URL: [https://clakr.github.io/frontend-mentor/product-preview-card/](https://clakr.github.io/frontend-mentor/product-preview-card/)
 
 ## Process
 
@@ -49,7 +49,7 @@ This is a solution to the [Product Preview Card challenge on Frontend Mentor](ht
 
 ### Thoughts
 
-Just like what I did in my [last solution](https://clakr.github.io/frontend-mentor/qr-code-component-main/), I started from using Mobile-first principle and work the component up, adjusting elements according to the design. Since Media Queries played a big role in this challenge, I integrated [SASS](https://sass-lang.com/) into the project just to feel out how easy SASS' syntax is in writing CSS.
+Just like what I did in my [last solution](https://clakr.github.io/frontend-mentor/qr-code/), I started from using Mobile-first principle and work the component up, adjusting elements according to the design. Since Media Queries played a big role in this challenge, I integrated [SASS](https://sass-lang.com/) into the project just to feel out how easy SASS' syntax is in writing CSS.
 
 ### Useful resources
 
