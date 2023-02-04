@@ -20,6 +20,7 @@ module.exports = {
       addBase({
         ':root': {
           fontSize: '18px',
+          fontFamily: 'Outfit',
         }
       })
     }),

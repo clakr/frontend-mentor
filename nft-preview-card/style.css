@@ -421,6 +421,7 @@ video {
 
 :root {
   font-size: 18px;
+  font-family: Outfit;
 }
 
 *, ::before, ::after {
@@ -515,10 +516,6 @@ video {
   --tw-backdrop-opacity:  ;
   --tw-backdrop-saturate:  ;
   --tw-backdrop-sepia:  ;
-}
-
-.pointer-events-none {
-  pointer-events: none;
 }
 
 .absolute {
