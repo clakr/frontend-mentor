@@ -1,0 +1,153 @@
+$mobile: 320px;
+$desktop: 1440px;
+
+@mixin screen-min($min) {
+  @media screen and (min-width: $min) {
+    @content;
+  }
+}
+
+:root {
+  --darkCyan: hsl(158, 36%, 37%);
+  --cream: hsl(30, 38%, 92%);
+  --veryDarkBlue: hsl(212, 21%, 14%);
+  --darkGrayishBlue: hsl(228, 12%, 48%);
+  --white: hsl(0, 0%, 100%);
+
+  --text-sm: 0.85rem;
+  --text-base: 1rem;
+  --text-lg: 2rem;
+
+  background-color: var(--cream);
+  font-size: 14px;
+  font-family: "Montserrat";
+  font-weight: 500;
+}
+
+main {
+  height: 100vh;
+  height: 100svh;
+
+  padding-inline: 1em;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 0.5em;
+  overflow: hidden;
+  display: grid;
+  max-width: 21em;
+
+  @include screen-min($desktop) {
+    grid-template-columns: repeat(2, minmax(0, 20em));
+    max-width: unset;
+  }
+}
+
+.card-header {
+  background-image: url("../images/image-product-mobile.jpg");
+  aspect-ratio: 4/3;
+  background-size: cover;
+  background-position: center;
+
+  @include screen-min($desktop) {
+    background-image: url("../images/image-product-desktop.jpg");
+    aspect-ratio: unset;
+  }
+}
+
+.card-body {
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+
+  @include screen-min($desktop) {
+    gap: 1.5em;
+    padding: 2em;
+  }
+
+  > * {
+    max-width: 30ch;
+  }
+
+  > h2 {
+    color: var(--darkGrayishBlue);
+    letter-spacing: 0.25em;
+    font-size: var(--text-sm);
+    font-weight: 400;
+  }
+
+  > h1 {
+    color: var(--veryDarkBlue);
+    font-family: "Fraunces";
+    line-height: 1em;
+
+    @include screen-min($desktop) {
+      max-width: 10ch;
+    }
+  }
+
+  > p {
+    font-size: var(--text-sm);
+    color: var(--darkGrayishBlue);
+
+    @include screen-min($desktop) {
+      max-width: 25ch;
+    }
+  }
+
+  > div {
+    display: flex;
+    gap: 1em;
+    align-items: center;
+
+    @include screen-min($desktop) {
+      gap: 1.5em;
+    }
+
+    > span:first-child {
+      font-family: "Fraunces";
+      font-size: var(--text-lg);
+      font-weight: bold;
+      color: var(--darkCyan);
+    }
+
+    > span:last-child {
+      color: var(--darkGrayishBlue);
+      text-decoration: line-through;
+      font-size: var(--text-sm);
+    }
+  }
+
+  > button {
+    all: unset;
+    color: var(--white);
+    background-color: var(--darkCyan);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1em;
+    gap: 1em;
+    font-size: var(--text-sm);
+    border-radius: 0.5em;
+    cursor: pointer;
+
+    &:active {
+      background-color: darken($color: hsl(158, 36%, 37%), $amount: 15%);
+    }
+  }
+}
+
+footer {
+  position: fixed;
+  inset: auto 1em 1em auto;
+  text-align: end;
+
+  > div > a:visited {
+    color: blue;
+  }
+}
