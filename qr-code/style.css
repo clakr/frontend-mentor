@@ -1,0 +1,74 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --lightGray: hsl(212, 45%, 89%);
+  --grayishBlue: hsl(220, 15%, 55%);
+  --darkBlue: hsl(218, 44%, 22%);
+
+  font-size: 15px;
+  font-family: Outfit;
+  color: var(--darkBlue);
+  background-color: var(--lightGray);
+}
+
+main {
+  height: 100vh; /* this serves as fallback height for older browsers */
+  height: 100svh;
+  padding: 2em;
+  display: grid;
+  place-items: center;
+}
+
+.card {
+  background: var(--white);
+  padding: 1em;
+  border-radius: 1.5em;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  align-items: center;
+
+  box-shadow: 0 1em 3em -1em rgb(31 50 81 / 0.25); /* i just blatantly copied tailwindcss' shadow-2xl utility class, just converted from px to em */
+
+  /* copied computed properties of the element from 375px viewport width and just went with it all throughout */
+  max-height: 33em; /* 495px */
+  max-width: 21em; /* 315px */
+}
+
+.card > div {
+  overflow: hidden;
+  border-radius: 0.75em;
+}
+
+.card > div > img {
+  transform: scale(1);
+  transition: transform 300ms;
+}
+
+.card:hover > div > img {
+  transform: scale(1.15);
+}
+
+.card > :not(:first-child) {
+  padding-inline: 0.5em;
+  line-height: 1.25em;
+  max-width: 25ch;
+}
+
+.card > :last-child {
+  padding-bottom: 1.5em;
+}
+
+span {
+  color: var(--grayishBlue);
+}
+
+footer {
+  position: fixed;
+  inset: auto 1em 1em auto;
+  text-align: end;
+}
+
+footer > div > a:visited {
+  color: blue;
+}
