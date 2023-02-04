@@ -16,11 +16,72 @@
 
     <!-- CSS -->
     <link rel="stylesheet" href="style.css" />
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
   </head>
-  <body>
-    <main class="bg-red-400">
-      Equilibrium #3429 Our Equilibrium collection promotes balance and calm.
-      0.041 ETH 3 days left Creation of Jules Wyvern
+  <body class="bg-vdbMain text-white subpixel-antialiased">
+    <main class="min-h-screen grid place-items-center p-4">
+      <div class="p-4 bg-vdbCard rounded-xl flex gap-4 flex-col max-w-[15.5em]">
+        <button class="relative group">
+          <img
+            src="./images/image-equilibrium.jpg"
+            class="rounded-lg"
+            alt="Equilibrium icon"
+          />
+          <div
+            class="hidden h-full w-full bg-cyan absolute top-0 rounded-lg group-active:grid place-items-center bg-opacity-50"
+          >
+            <img src="./images/icon-view.svg" class="h-8 w-8" alt="" />
+          </div>
+        </button>
+        <div class="flex flex-col gap-3 border-b pb-4 border-b-vdbLine">
+          <h1
+            class="font-semibold active:text-cyan text-start cursor-pointer select-none"
+          >
+            Equilibrium #3429
+          </h1>
+          <span class="font-light text-xs text-softBlue leading-5"
+            >Our Equilibrium collection promotes balance and calm.</span
+          >
+          <div class="flex justify-between">
+            <h2
+              class="font-semibold uppercase text-xs flex gap-2 justify-center items-center text-cyan"
+            >
+              <img
+                src="./images/icon-ethereum.svg"
+                alt="Ethereum icon"
+                class="h-4"
+              />
+              0.041 eth
+            </h2>
+            <span
+              class="text-xs flex gap-2 justify-center items-center text-softBlue"
+            >
+              <img src="./images/icon-clock.svg" alt="Clock icon" class="h-4" />
+              3 days left
+            </span>
+          </div>
+        </div>
+        <div class="text-xs flex items-center gap-4">
+          <img
+            src="./images/image-avatar.png"
+            alt=""
+            class="h-6 w-6 border border-white rounded-full"
+          />
+          <p class="text-cyan">
+            Creation of
+            <button type="button" class="text-white active:text-cyan">
+              Jules Wyvern
+            </button>
+          </p>
+        </div>
+      </div>
     </main>
   </body>
 </html>
