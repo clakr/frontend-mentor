@@ -63,10 +63,12 @@ span {
   color: var(--grayishBlue);
 }
 
-.attribution {
+footer {
   position: fixed;
-  inset: auto 0 0 auto;
+  inset: auto 1em 1em auto;
   text-align: end;
-  max-width: 25ch;
-  line-height: 1.25em;
+}
+
+footer > div > a:visited {
+  color: blue;
 }
