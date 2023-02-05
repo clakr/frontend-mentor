@@ -518,6 +518,10 @@ video {
   --tw-backdrop-sepia:  ;
 }
 
+.fixed {
+  position: fixed;
+}
+
 .absolute {
   position: absolute;
 }
@@ -528,6 +532,22 @@ video {
 
 .top-0 {
   top: 0px;
+}
+
+.bottom-0 {
+  bottom: 0px;
+}
+
+.right-0 {
+  right: 0px;
+}
+
+.bottom-4 {
+  bottom: 1rem;
+}
+
+.right-4 {
+  right: 1rem;
 }
 
 .flex {
@@ -681,6 +701,10 @@ video {
   text-align: start;
 }
 
+.text-end {
+  text-align: end;
+}
+
 .text-xs {
   font-size: 0.75rem;
   line-height: 1rem;
@@ -715,6 +739,15 @@ video {
 .text-cyan {
   --tw-text-opacity: 1;
   color: hsl(178 100% 50% / var(--tw-text-opacity));
+}
+
+.text-blue-400 {
+  --tw-text-opacity: 1;
+  color: rgb(96 165 250 / var(--tw-text-opacity));
+}
+
+.underline {
+  text-decoration-line: underline;
 }
 
 .subpixel-antialiased {
