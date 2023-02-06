@@ -13,21 +13,25 @@
 body {
   background-color: var(--veryDarkBlue);
   color: var(--white);
+  padding-inline: 1em;
 }
 
 main {
   height: 100vh;
   height: 100svh;
-  display: grid;
-  place-items: center;
-  padding: 1.5em;
+  position: relative;
 }
 
 .card {
   background-image: radial-gradient(circle at top, #202731, #171e28);
   border-radius: 1em;
   min-width: 18.5em;
-  max-width: 21em;
+  max-width: 21.5em;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  opacity: 0%;
+  transform: translateY(calc(-50% + -2.5em)) translateX(-50%);
 }
 
 .card.rating {
@@ -35,6 +39,14 @@ main {
   display: flex;
   flex-direction: column;
   gap: 0.5em;
+  animation: fadeIn forwards 300ms;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 100%;
+    transform: translateY(-50%) translateX(-50%);
+  }
 }
 
 .rating > .icon {
@@ -81,6 +93,7 @@ main {
   display: grid;
   place-items: center;
   vertical-align: middle;
+  transition: background-color 300ms;
 }
 
 .rating > .buttons > button:hover {
@@ -118,6 +131,7 @@ main {
   flex-direction: column;
   gap: 1.25em;
   align-items: center;
+  z-index: -1;
 }
 
 .thank-you > img {
@@ -146,8 +160,4 @@ main {
   font-size: 0.75em;
   text-align: center;
   margin-top: -0.75em;
-}
-
-.card.hidden {
-  display: none;
 }

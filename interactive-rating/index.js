@@ -10,8 +10,33 @@ buttons.map((button) => {
 const submitBtn = document.querySelector('button[type="submit"]')
 
 submitBtn.addEventListener("click", () => {
-  document.querySelector(".card.rating").classList.add("hidden")
-  document.querySelector(".card.thank-you").classList.remove("hidden")
+  document.querySelector(".card.rating").animate(
+    [
+      {
+        transform: "translateY(calc(-50% + 2.5em)) translateX(-50%)",
+        opacity: "0%",
+        pointerEvents: "none",
+      },
+    ],
+    {
+      duration: 300,
+      fill: "forwards",
+    }
+  )
+
+  document.querySelector(".card.thank-you").animate(
+    [
+      {
+        transform: "translateY(-50%) translateX(-50%)",
+        opacity: "100%",
+      },
+    ],
+    {
+      duration: 300,
+      fill: "forwards",
+    }
+  )
+
   const activeBtnTextContent =
     document.querySelector("button.active").textContent
   document.querySelector(
