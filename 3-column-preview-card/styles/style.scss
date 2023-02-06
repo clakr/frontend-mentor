@@ -1,0 +1,124 @@
+$brightOrange: hsl(31, 77%, 52%);
+$darkCyan: hsl(184, 100%, 22%);
+$veryDarkCyan: hsl(179, 100%, 13%);
+$transparentWhite: hsla(0, 0%, 100%, 0.75);
+$veryLightGray: hsl(0, 0%, 95%);
+
+@mixin screen-min($min) {
+  @media screen and (min-width: $min) {
+    @content;
+  }
+}
+
+:root {
+  font-size: 15px;
+  color: $transparentWhite;
+  font-family: "Lexend Deca";
+}
+
+main {
+  position: relative;
+  display: grid;
+  min-height: 100vh;
+  min-height: 100svh;
+  place-items: center;
+  padding-block: 5em;
+  padding-inline: 1.5em;
+
+  > footer {
+    position: absolute;
+    inset: auto 1em 1em auto;
+    text-align: end;
+    color: black;
+  }
+
+  > footer > div > a:visited {
+    color: blue;
+  }
+}
+
+h1 {
+  font-family: "Big Shoulders Display";
+  text-transform: uppercase;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+p,
+button {
+  font-size: 0.75em;
+  line-height: 2em;
+}
+
+.columns {
+  border-radius: 0.5em;
+  overflow: hidden;
+  display: grid;
+
+  @include screen-min(768px) {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+
+  > div {
+    padding: 3em;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 25em;
+    gap: 2em;
+
+    @include screen-min(768px) {
+      max-width: 18em;
+      min-height: 27.5em;
+    }
+
+    > .content {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5em;
+
+      > img {
+        width: 3.5em;
+      }
+    }
+
+    > .cta > button {
+      padding: 0.75em 3em;
+      border-radius: 100vmax;
+      background-color: $veryLightGray;
+
+      &:active {
+        background-color: transparent;
+        color: $veryLightGray;
+        outline: 0.15em $veryLightGray solid;
+      }
+    }
+  }
+
+  > .sedan {
+    background-color: $brightOrange;
+
+    > .cta > button {
+      color: $brightOrange;
+    }
+  }
+
+  > .suv {
+    background-color: $darkCyan;
+
+    > .cta > button {
+      color: $darkCyan;
+    }
+  }
+
+  > .luxury {
+    background-color: $veryDarkCyan;
+
+    > .cta > button {
+      color: $veryDarkCyan;
+    }
+  }
+}

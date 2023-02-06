@@ -1,0 +1,103 @@
+:root {
+  font-size: 15px;
+  color: hsla(0deg, 0%, 100%, 0.75);
+  font-family: "Lexend Deca";
+}
+
+main {
+  position: relative;
+  display: grid;
+  min-height: 100vh;
+  min-height: 100svh;
+  place-items: center;
+  padding-block: 5em;
+  padding-inline: 1.5em;
+}
+main > footer {
+  position: absolute;
+  inset: auto 1em 1em auto;
+  text-align: end;
+  color: black;
+}
+main > footer > div > a:visited {
+  color: blue;
+}
+
+h1 {
+  font-family: "Big Shoulders Display";
+  text-transform: uppercase;
+}
+
+button {
+  all: unset;
+  cursor: pointer;
+}
+
+p,
+button {
+  font-size: 0.75em;
+  line-height: 2em;
+}
+
+.columns {
+  border-radius: 0.5em;
+  overflow: hidden;
+  display: grid;
+}
+@media screen and (min-width: 768px) {
+  .columns {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+.columns > div {
+  padding: 3em;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 25em;
+  gap: 2em;
+}
+@media screen and (min-width: 768px) {
+  .columns > div {
+    max-width: 18em;
+    min-height: 27.5em;
+  }
+}
+.columns > div > .content {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+}
+.columns > div > .content > img {
+  width: 3.5em;
+}
+.columns > div > .cta > button {
+  padding: 0.75em 3em;
+  border-radius: 100vmax;
+  background-color: hsl(0deg, 0%, 95%);
+}
+.columns > div > .cta > button:active {
+  background-color: transparent;
+  color: hsl(0deg, 0%, 95%);
+  outline: 0.15em hsl(0deg, 0%, 95%) solid;
+}
+.columns > .sedan {
+  background-color: hsl(31deg, 77%, 52%);
+}
+.columns > .sedan > .cta > button {
+  color: hsl(31deg, 77%, 52%);
+}
+.columns > .suv {
+  background-color: hsl(184deg, 100%, 22%);
+}
+.columns > .suv > .cta > button {
+  color: hsl(184deg, 100%, 22%);
+}
+.columns > .luxury {
+  background-color: hsl(179deg, 100%, 13%);
+}
+.columns > .luxury > .cta > button {
+  color: hsl(179deg, 100%, 13%);
+}
+
+/*# sourceMappingURL=style.css.map */
