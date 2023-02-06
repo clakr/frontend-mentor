@@ -1,0 +1,153 @@
+:root {
+  --white: hsl(0, 0%, 100%);
+  --lightGrey: hsl(217, 12%, 63%);
+  --mediumGrey: hsl(216, 12%, 54%);
+  --darkBlue: hsl(213, 20%, 18%);
+  --veryDarkBlue: hsl(216, 12%, 8%);
+  --orange: hsl(25, 97%, 53%);
+
+  font-size: 15px;
+  font-family: Overpass;
+}
+
+body {
+  background-color: var(--veryDarkBlue);
+  color: var(--white);
+}
+
+main {
+  height: 100vh;
+  height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 1.5em;
+}
+
+.card {
+  background-image: radial-gradient(circle at top, #202731, #171e28);
+  border-radius: 1em;
+  min-width: 18.5em;
+  max-width: 21em;
+}
+
+.card.rating {
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.rating > .icon {
+  padding: 0.7em;
+  background-color: var(--darkBlue);
+  border-radius: 50%;
+  width: fit-content;
+  display: grid;
+  place-items: center;
+}
+
+.rating > .icon > img {
+  height: 0.65em;
+  aspect-ratio: 1 / 0.95;
+}
+
+.rating > h1 {
+  font-size: 1.25em;
+  color: var(--white);
+  padding-top: 0.5em;
+}
+
+.rating > p {
+  font-size: 0.75em;
+  color: var(--lightGrey);
+}
+
+.rating > .buttons {
+  display: flex;
+  gap: 1em;
+  justify-content: space-between;
+  padding-block: 0.75em;
+}
+
+.rating > .buttons > button {
+  all: unset;
+  cursor: pointer;
+  font-size: 0.75em;
+  color: var(--mediumGrey);
+  background: var(--darkBlue);
+  border-radius: 50%;
+  aspect-ratio: 1 / 0.95;
+  height: 3em;
+  display: grid;
+  place-items: center;
+  vertical-align: middle;
+}
+
+.rating > .buttons > button:hover {
+  background-color: var(--lightGrey);
+  color: var(--white);
+}
+
+.rating > .buttons > button.active {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.rating > button {
+  all: unset;
+  cursor: pointer;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 0.75em;
+  letter-spacing: 0.1em;
+  background-color: var(--orange);
+  padding: 0.75em;
+  border-radius: 100vmax; /* this makes it so that it's always pill-shaped */
+  display: grid;
+  place-items: center;
+}
+
+.rating > button:active {
+  background-color: var(--white);
+  color: var(--orange);
+}
+
+.card.thank-you {
+  padding: 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25em;
+  align-items: center;
+}
+
+.thank-you > img {
+  width: 7.5em;
+  margin: auto;
+}
+
+.thank-you > span {
+  background-color: var(--darkBlue);
+  color: var(--orange);
+  display: grid;
+  place-items: center;
+  vertical-align: middle;
+  width: fit-content;
+  padding: 0.5em 1em 0.35em;
+  border-radius: 100vmax;
+  font-size: 0.75em;
+}
+
+.thank-you > h2 {
+  font-size: 1.25em;
+}
+
+.thank-you > p {
+  color: var(--lightGrey);
+  font-size: 0.75em;
+  text-align: center;
+  margin-top: -0.75em;
+}
+
+.card.hidden {
+  display: none;
+}
