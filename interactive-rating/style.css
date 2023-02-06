@@ -161,3 +161,14 @@ main {
   text-align: center;
   margin-top: -0.75em;
 }
+
+footer {
+  position: fixed;
+  inset: auto 1em 1em auto;
+  text-align: end;
+}
+
+footer > div > a:visited,
+footer > div > a {
+  color: var(--orange);
+}
