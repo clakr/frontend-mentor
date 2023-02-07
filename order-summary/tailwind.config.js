@@ -12,9 +12,6 @@ module.exports = {
         desaturatedBlue: "var(--desaturatedBlue)",
         darkBlue: "var(--darkBlue)",
       },
-      screens: {
-        xs: "425px",
-      },
     },
   },
 }
