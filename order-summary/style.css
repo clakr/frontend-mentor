@@ -621,6 +621,18 @@ video {
   background-color: var(--brightBlue);
 }
 
+.bg-mobile {
+  background-image: url("images/pattern-background-mobile.svg");
+}
+
+.bg-contain {
+  background-size: contain;
+}
+
+.bg-no-repeat {
+  background-repeat: no-repeat;
+}
+
 .p-5 {
   padding: 1.25rem;
 }
@@ -690,18 +702,6 @@ video {
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
 }
 
-.bg-main {
-  background-image: url("images/pattern-background-mobile.svg");
-  background-repeat: no-repeat;
-  background-size: contain;
-}
-
-@media (min-width: 1024px) {
-  .bg-main {
-    background-image: url("images/pattern-background-desktop.svg");
-  }
-}
-
 .shadow-brightBlue\/50 {
   --tw-shadow-color: rgb(56 41 224 / 0.25);
   --tw-shadow: var(--tw-shadow-colored);
@@ -713,4 +713,10 @@ video {
 
 .active\:opacity-75:active {
   opacity: 0.75;
+}
+
+@media (min-width: 1024px) {
+  .lg\:bg-desktop {
+    background-image: url("images/pattern-background-desktop.svg");
+  }
 }

@@ -12,6 +12,10 @@ module.exports = {
         desaturatedBlue: "var(--desaturatedBlue)",
         darkBlue: "var(--darkBlue)",
       },
+      backgroundImage: {
+        mobile: 'url("images/pattern-background-mobile.svg")',
+        desktop: 'url("images/pattern-background-desktop.svg")',
+      },
     },
   },
 }

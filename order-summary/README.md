@@ -12,6 +12,7 @@ This is a solution to the [Order Summary Card challenge on Frontend Mentor](http
   - [Thoughts](#thoughts)
   - [Useful resources](#useful-resources)
 - [Author](#author)
+- [Acknowledgments](#acknowledgments)
 
 ## Overview
 
@@ -56,3 +57,7 @@ Through the latter approach, you can add multiple properties in a single utility
 
 - Curriculum Vitae / Résumé - [Clark Tolosa](https://clakr.vercel.app)
 - Frontend Mentor - [@clakr](https://www.frontendmentor.io/profile/clakr)
+
+## Acknowledgments
+
+Thank you, [@slightly-functional](https://www.frontendmentor.io/profile/slightly-functional) for pointing out [this comment](https://www.frontendmentor.io/solutions/order-summary-solution-through-extending-tailwinds-utility-classes-k6e5jUfIks#comment-63e1e10cec666a7bfb597eae) on my solution to instead extend a `background-image` utility class in the `tailwind.config.js`, add it to `main` HTML element together with `bg-no-repeat` & `bg-contain`.

@@ -16,18 +16,6 @@
 }
 
 @layer utilities {
-  .bg-main {
-    background-image: url("images/pattern-background-mobile.svg");
-    background-repeat: no-repeat;
-    background-size: contain;
-  }
-
-  @media (min-width: 1024px) {
-    .bg-main {
-      background-image: url("images/pattern-background-desktop.svg");
-    }
-  }
-
   .shadow-brightBlue\/50 {
     --tw-shadow-color: rgb(56 41 224 / 0.25);
     --tw-shadow: var(--tw-shadow-colored);
