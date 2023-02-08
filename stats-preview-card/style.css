@@ -37,10 +37,9 @@ main {
   background-size: cover;
   height: 100%;
   width: 100%;
-
-  background-color: var(--softViolet);
-  background-blend-mode: multiply;
-  opacity: 75%;
+  background-color: hsl(295, 30%, 50%);
+  background-blend-mode: overlay;
+  opacity: 50%;
 }
 
 .card__body {
