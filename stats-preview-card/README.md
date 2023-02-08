@@ -52,7 +52,7 @@ The challenge is the light violet filter(?) on the image. I've tried the followi
 }
 ```
 It takes a lot of time doing a trial-and-error in finding a degree that matches with the design
- ```css
+```css
 .card__header::after {
   height: inherit;
   width: inherit;
