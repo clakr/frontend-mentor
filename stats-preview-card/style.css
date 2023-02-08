@@ -32,14 +32,13 @@ main {
 }
 
 .card__header {
-  aspect-ratio: 1.5 / 1;
-  background-image: url("./images/image-header-mobile.jpg");
-  background-size: cover;
+  background-color: var(--softViolet);
+}
+
+.card__header > img {
   height: 100%;
-  width: 100%;
-  background-color: hsl(295, 30%, 50%);
-  background-blend-mode: overlay;
-  opacity: 50%;
+  mix-blend-mode: multiply;
+  opacity: 75%;
 }
 
 .card__body {
@@ -98,6 +97,16 @@ main {
   text-transform: uppercase;
 }
 
+footer {
+  position: fixed;
+  inset: auto 1em 1em auto;
+  text-align: end;
+}
+
+footer > div > a {
+  color: var(--softViolet);
+}
+
 @media (min-width: 1024px) {
   .card {
     display: grid;
@@ -109,7 +118,6 @@ main {
 
   .card__header {
     order: 1;
-    background-image: url("./images/image-header-desktop.jpg");
   }
 
   .card__body {
