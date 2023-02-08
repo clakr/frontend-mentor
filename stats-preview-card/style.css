@@ -1,0 +1,140 @@
+:root {
+  --veryDarkBlue: hsl(233, 47%, 7%);
+  --darkDesaturatedBlue: hsl(244, 38%, 16%);
+  --softViolet: hsl(277, 64%, 61%);
+  --white: hsl(0, 0%, 100%);
+  --slightlytransparentwhitemain: hsla(0, 0%, 100%, 0.75);
+  --slightlytransparentwhitestat: hsla(0, 0%, 100%, 0.6);
+
+  /* font-family: "Lexend Deca", sans-serif; */
+  font-family: "Inter", sans-serif;
+  color: var(--white);
+  font-size: 15px;
+}
+
+body {
+  background-color: var(--veryDarkBlue);
+}
+
+main {
+  min-height: 100vh;
+  min-height: 100svh;
+  display: grid;
+  place-items: center;
+  padding: 1.5em;
+}
+
+.card {
+  background-color: var(--darkDesaturatedBlue);
+  border-radius: 0.5em;
+  overflow: hidden;
+  max-width: 18em;
+}
+
+.card__header {
+  aspect-ratio: 1.5 / 1;
+  background-image: url("./images/image-header-mobile.jpg");
+  background-size: cover;
+  height: 100%;
+  width: 100%;
+  position: relative;
+  mix-blend-mode: screen;
+}
+
+.card__header::after {
+  content: "";
+  height: inherit;
+  width: inherit;
+  background-color: var(--softViolet);
+  position: absolute;
+  mix-blend-mode: multiply;
+}
+
+.card__body {
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.card__body--copywrite {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  text-align: center;
+}
+
+.card__body--copywrite > h1 {
+  font-size: 1.5em;
+  line-height: 1.25em;
+}
+
+.card__body--copywrite > h1 > span {
+  color: var(--softViolet);
+}
+
+.card__body--copywrite > p {
+  color: var(--slightlytransparentwhitemain);
+  font-size: 0.75em;
+  padding-inline: 0.5em;
+  max-width: 30ch;
+  margin-inline: auto;
+}
+
+.card__body--stats {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5em;
+  align-items: center;
+  text-align: center;
+}
+
+.card__body--stats > div {
+  display: flex;
+  flex-direction: column;
+}
+
+.card__body--stats > div > span {
+  font-weight: bold;
+}
+
+.card__body--stats > div > h2 {
+  font-size: 0.65em;
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: normal;
+  color: var(--slightlytransparentwhitestat);
+  text-transform: uppercase;
+}
+
+@media (min-width: 1024px) {
+  .card {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    max-width: 50em;
+    border-radius: 0.25em;
+  }
+
+  .card__header {
+    order: 1;
+    background-image: url("./images/image-header-desktop.jpg");
+  }
+
+  .card__body {
+    padding: 3em;
+  }
+
+  .card__body--copywrite {
+    text-align: start;
+  }
+
+  .card__body--copywrite > p {
+    margin-inline: unset;
+    padding-inline: unset;
+    max-width: unset;
+  }
+
+  .card__body--stats {
+    flex-direction: row;
+    text-align: start;
+  }
+}
