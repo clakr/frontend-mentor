@@ -35,19 +35,6 @@ main {
   }
 }
 
-.card-header {
-  background-image: url("../images/image-product-mobile.jpg");
-  aspect-ratio: 4/3;
-  background-size: cover;
-  background-position: center;
-}
-@media screen and (min-width: 1440px) {
-  .card-header {
-    background-image: url("../images/image-product-desktop.jpg");
-    aspect-ratio: unset;
-  }
-}
-
 .card-body {
   padding: 1.5em;
   display: flex;
@@ -132,8 +119,8 @@ footer {
   inset: auto 1em 1em auto;
   text-align: end;
 }
-footer > div > a:visited {
-  color: blue;
+footer > div > a {
+  color: var(--darkCyan);
 }
 
 /*# sourceMappingURL=style.css.map */
