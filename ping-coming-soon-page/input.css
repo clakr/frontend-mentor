@@ -1,3 +1,29 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+@layer base {
+  :root {
+    /* Primary */
+    --blue: hsl(223, 87%, 63%);
+
+    /* Secondary */
+    --paleBlue: hsl(223, 100%, 88%);
+    --lightRed: hsl(354, 100%, 66%);
+
+    /* Neutral */
+    --gray: hsl(0, 0%, 59%);
+    --veryDarkBlue: hsl(209, 33%, 12%);
+
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 20px;
+    color: var(--veryDarkBlue);
+  }
+}
+
+@layer utilities {
+  .shadow-blue\/25 {
+    --tw-shadow-color: rgb(79 125 243 / 0.25);
+    --tw-shadow: var(--tw-shadow-colored);
+  }
+}
