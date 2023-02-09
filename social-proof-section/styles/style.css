@@ -8,4 +8,156 @@
   font-family: "League Spartan", sans-serif;
 }
 
+main {
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: 5em 1.5em;
+  display: grid;
+  gap: 2em;
+}
+@media screen and (min-width: 1024px) {
+  main {
+    width: 1024px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    margin-inline: auto;
+    gap: 5em;
+  }
+}
+
+.copywrite {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 1024px) {
+  .copywrite {
+    justify-content: flex-end;
+    align-items: unset;
+    width: fit-content;
+  }
+}
+.copywrite > h1 {
+  color: var(--veryDarkMagenta);
+  line-height: 0.85em;
+  max-width: 15ch;
+  text-align: center;
+  font-size: 2em;
+}
+@media screen and (min-width: 1024px) {
+  .copywrite > h1 {
+    font-size: 3em;
+    text-align: unset;
+  }
+}
+.copywrite > p {
+  color: var(--darkGrayishMagenta);
+  text-align: center;
+}
+@media screen and (min-width: 1024px) {
+  .copywrite > p {
+    max-width: 40ch;
+    text-align: unset;
+  }
+}
+
+.ratings {
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  font-weight: 700;
+  color: var(--veryDarkMagenta);
+}
+@media screen and (min-width: 1024px) {
+  .ratings {
+    justify-content: flex-end;
+    align-items: flex-end;
+  }
+}
+.ratings > div {
+  background-color: var(--lightGrayishMagenta);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5em;
+  padding: 0.75em;
+  border-radius: 0.5em;
+}
+@media screen and (min-width: 1024px) {
+  .ratings > div {
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 1em 1.5em;
+    width: 27.5em;
+  }
+  .ratings > div:nth-child(1) {
+    transform: translateX(-6em);
+  }
+  .ratings > div:nth-child(2) {
+    transform: translateX(-3em);
+  }
+}
+.ratings > div > div {
+  display: flex;
+  gap: 0.5em;
+  justify-content: center;
+}
+@media screen and (min-width: 1024px) {
+  .ratings > div > div {
+    padding-inline: 1em;
+  }
+}
+
+.testimonials {
+  display: grid;
+  gap: 1em;
+  color: var(--white);
+}
+@media screen and (min-width: 1024px) {
+  .testimonials {
+    grid-column: span 2/span 2;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    align-items: flex-start;
+    gap: 2em;
+  }
+}
+.testimonials > .card {
+  background-color: var(--veryDarkMagenta);
+  padding: 2em 1.5em;
+  border-radius: 0.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+}
+@media screen and (min-width: 1024px) {
+  .testimonials > .card:nth-child(2) {
+    transform: translateY(1.5em);
+  }
+  .testimonials > .card:nth-child(3) {
+    transform: translateY(3em);
+  }
+}
+.testimonials > .card > div {
+  display: flex;
+  align-items: center;
+  gap: 1.5em;
+}
+.testimonials > .card > div > img {
+  aspect-ratio: 1/1;
+  height: 2.5em;
+  border-radius: 50%;
+}
+.testimonials > .card > div > div {
+  line-height: 1.25em;
+}
+.testimonials > .card > div > div > h2 {
+  font-size: 1em;
+}
+.testimonials > .card > div > div > span {
+  color: var(--softPink);
+}
+
 /*# sourceMappingURL=style.css.map */
