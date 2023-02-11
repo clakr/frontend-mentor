@@ -13,7 +13,7 @@
 }
 
 body {
-  --offsetX: -7.5em;
+  --offsetX: -10em;
   --offsetY: -7.5em;
 
   background-image: url(./images/bg-pattern-top.svg),
@@ -104,9 +104,15 @@ main {
   color: var(--darkGrayishBlue);
 }
 
-@media (min-width: 1024px) {
+@media (min-width: 640px) {
   body {
-    --offsetX: -5em;
-    --offsetY: -25em;
+    --offsetX: -8.75em;
+    --offsetY: -15em;
+  }
+}
+@media (min-width: 768px) {
+  body {
+    --offsetX: -7.5em;
+    --offsetY: -22.5em;
   }
 }
