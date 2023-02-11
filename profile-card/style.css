@@ -42,6 +42,7 @@ main {
   gap: 1em;
   overflow: hidden;
   max-width: 19em;
+  box-shadow: 0 25px 50px -12px rgb(45 50 72 / 0.5); /* TailwindCSS' `shadow-2xl` */
 }
 
 .user__header {
@@ -104,15 +105,26 @@ main {
   color: var(--darkGrayishBlue);
 }
 
+footer {
+  position: fixed;
+  inset: auto 1em 1em auto;
+  text-align: end;
+}
+
+footer > div > a:visited,
+footer > div > a {
+  color: blue;
+}
+
 @media (min-width: 640px) {
   body {
-    --offsetX: -8.75em;
-    --offsetY: -15em;
+    --offsetX: -5em;
+    --offsetY: -17.5em;
   }
 }
 @media (min-width: 768px) {
   body {
-    --offsetX: -7.5em;
-    --offsetY: -22.5em;
+    --offsetX: 0em;
+    --offsetY: -27.5em;
   }
 }
