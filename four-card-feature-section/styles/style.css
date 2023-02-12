@@ -1,0 +1,144 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;400;600&display=swap");
+:root {
+  font-family: "Poppins", sans-serif;
+  font-size: 15px;
+  color: hsl(234deg, 12%, 34%);
+  background-color: hsl(0deg, 0%, 98%);
+}
+
+main {
+  min-height: 100vh;
+  min-height: 100svh;
+  padding: 5em 2em;
+  display: flex;
+  flex-direction: column;
+  gap: 4em;
+  position: relative;
+}
+main > footer {
+  display: none;
+  position: absolute;
+  inset: auto 1em 1em auto;
+  text-align: end;
+  color: black;
+}
+@media (min-width: 1024px) {
+  main > footer {
+    display: block;
+  }
+}
+main > footer > div > a,
+main > footer > div a:visited {
+  color: hsl(212deg, 86%, 64%);
+  text-decoration: underline;
+}
+
+.copywrite {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  align-items: center;
+}
+.copywrite__heading {
+  font-weight: 200;
+  font-size: 1.25em;
+}
+@media (min-width: 1024px) {
+  .copywrite__heading {
+    font-size: 2em;
+    max-width: 25ch;
+  }
+}
+.copywrite__highlight {
+  font-weight: bold;
+}
+.copywrite__subheading {
+  font-size: 0.85em;
+  color: hsl(229deg, 6%, 66%);
+}
+@media (min-width: 1024px) {
+  .copywrite__subheading {
+    font-size: 1em;
+    max-width: 60ch;
+  }
+}
+
+.cards_container {
+  display: grid;
+  place-items: center;
+  gap: 2em;
+  max-width: 64em;
+  align-self: center;
+}
+@media (min-width: 1024px) {
+  .cards_container {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: repeat(2, minmax(0, 1fr));
+  }
+}
+
+.card {
+  padding: 1.5em;
+  display: flex;
+  flex-direction: column;
+  gap: 0.25em;
+  background-color: white;
+  border-radius: 0.5em;
+  box-shadow: 0 20px 25px -5px rgba(163, 165, 174, 0.25), 0 8px 10px -6px rgba(163, 165, 174, 0.25);
+  overflow: hidden;
+  position: relative;
+  max-width: 18em;
+}
+.card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-top-width: 3px;
+  border-top-style: solid;
+}
+.card:nth-child(1) {
+  grid-row: span 2/span 2;
+}
+.card:nth-child(1)::before {
+  border-top-color: hsl(180deg, 62%, 55%);
+}
+.card:nth-child(2)::before {
+  border-top-color: hsl(0deg, 78%, 62%);
+}
+@media (min-width: 1024px) {
+  .card:nth-child(3) {
+    order: 1;
+  }
+}
+.card:nth-child(3)::before {
+  border-top-color: hsl(34deg, 97%, 64%);
+}
+.card:nth-child(4) {
+  grid-row: span 2/span 2;
+}
+@media (min-width: 1024px) {
+  .card:nth-child(4) {
+    order: 0;
+  }
+}
+.card:nth-child(4)::before {
+  border-top-color: hsl(212deg, 86%, 64%);
+}
+.card__heading {
+  font-weight: bold;
+  font-size: 1.1em;
+}
+.card__subheading {
+  font-size: 0.75em;
+  color: hsl(229deg, 6%, 66%);
+  line-height: 1.75em;
+}
+.card__icon {
+  align-self: flex-end;
+  aspect-ratio: 1/1;
+  height: 3em;
+  margin-top: 2em;
+}
+
+/*# sourceMappingURL=style.css.map */
